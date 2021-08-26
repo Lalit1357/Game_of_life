@@ -2,8 +2,13 @@
 
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
+let button = document.getElementById('btn');
 
-const resolution = 3;
+function startAgain(){
+    location.reload();
+}
+
+const resolution = 15;   
 canvas.width = 600;
 canvas.height = 600;
 
@@ -78,7 +83,7 @@ function render(grid) {
             context.rect(col * resolution, row * resolution, resolution, resolution);
             context.fillStyle = cell ? '#FF0000' : '#F0E68C';
             context.fill();
-            // context.stroke();
+            context.stroke();
         }
     }
 
